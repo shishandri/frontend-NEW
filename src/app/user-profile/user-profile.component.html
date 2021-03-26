@@ -1,0 +1,69 @@
+<app-my-nav>
+  <body> 
+      <h1>User profile</h1>
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0 card-title"></h5>
+    <img class="img-fluid rounded-circle mb-2" src="{{this.urlimg}}" *ngIf="this.urlimg" style="height: 100px; width:100px">
+
+    <span class="filewrap">
+      Choose profile picture
+      <input type="file" name="uploadedImage" (change)="onFileSelect($event)" #UploadFileInput>
+    </span>
+   
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <label>Email</label>
+        <label>FullName</label>
+    </div>
+    <div class="col-sm-6">
+      <p class="text-muted f-w-600"> {{userDetails.email}}</p>
+      <p class="text-muted f-w-600">  {{userDetails.fullName.split(' ')[0]}}</p>
+    </div>  
+    </div>
+     <h1> Add Additional Information</h1>
+    <hr size="100"> 
+    <form class="form-horizontal" [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+      
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Address</label>
+  </div>
+  <div class=" form-group col-sm-6">
+    <input type="text" formControlName="address" class="form-control form-control-lg"  placeholder="Address" />
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Mobile No.</label>
+    </div>
+    <div class=" form-group col-sm-6">
+          <input type="text" formControlName="mobile" class="form-control form-control-lg"  placeholder="Mobile No." />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Alternative No.</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="alternativeNo" class="form-control form-control-lg"  placeholder="Alternative No."/>
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="text-center mt-3">
+        <input class="btn btn-primary" type="submit" value="Update Profile">
+     </div> 
+  </div>
+  </form>
+  </div>
+     </div> 
+  </div>
+  </div>
+  </body>
+  </app-my-nav>

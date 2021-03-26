@@ -1,0 +1,56 @@
+
+<app-my-nav> 
+<body>
+  <div class="container">
+  </div>
+       <div class="row"> 
+         <div class="col-sm-2">
+         </div>
+           <div class="col-md-8">  
+<div class="card">
+  <div class="card-header">
+     <h1 class="card-title">Add Client</h1> 
+    </div>
+    <div class="card-body">
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label class="form-label">Client Name</label>
+                      <input type="text" formControlName="ClientName" class="form-control" [ngClass]="{'is-invalid': submitted && f.ClientName.errors }" />
+                      <div *ngIf="submitted && f.ClientName.errors" class="invalid-feedback">
+                          <div *ngIf="f.ClientName.errors.required">Client Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label  class="form-label">ClientEmail</label>
+                      <input type="text" formControlName="ClientEmail" class="form-control" [ngClass]="{'is-invalid': submitted && f.ClientEmail.errors }" />
+                      <div *ngIf="submitted && f.ClientEmail.errors" class="invalid-feedback">
+                          <div *ngIf="f.ClientEmail.errors.required">Email is required</div>
+                          <div *ngIf="f.ClientEmail.errors.ClientEmail">Email must be a valid email address</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label  class="form-label">Client Skype</label>
+                    <input type="text" formControlName="ClientSkype" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ClientSkype.errors }" />
+                    <div *ngIf="submitted && f.ClientSkype.errors" class="invalid-feedback">
+                        <div *ngIf="f.ClientSkype.errors.required">Client Skype is required</div>
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label  class="form-label">ServerDetail</label>
+                    <textarea id="name" rows="3" class="form-control" formControlName="ServerDetail"  [ngClass]="{ 'is-invalid': submitted && f.ServerDetail.errors }"  required [(ngModel)]="client.ServerDetail" name="ServerDetail"></textarea>
+                    <div *ngIf="submitted && f.ServerDetail.errors" class="invalid-feedback">
+                        <div *ngIf="f.ServerDetail.errors.required">Server Detail is required</div>
+                    </div>
+                </div>
+                <div class="text-center"> 
+                  <div class="form-group">
+                      <button class="btn btn-primary btn-lg">Save</button>
+                  </div>
+                </div>
+               </form>
+           </div> 
+      </div>
+           </div>
+  </div>   
+</body>
+</app-my-nav> 

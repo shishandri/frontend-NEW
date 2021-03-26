@@ -1,0 +1,43 @@
+
+        <body>
+        <div class="container">
+          <h1>Client Details</h1>
+      </div>
+          <div class="container">
+            <button type="button" class="btn btn-primary" (click)="AddClient()">Add Client</button> 
+            <div class="card">
+        <div class="table-responsive">
+        <table class="table">
+          <thead>  
+              <tr>  
+                <th>Client Id</th>
+                <th>Client Name</th>  
+                  <th>Client Email</th>  
+                  <th>Client Skype</th>  
+                  <th>Server Detail</th>   
+                  <th>Edit/Delete</th>   
+              </tr>  
+          </thead>  
+          <tbody>  
+              <tr *ngFor="let emp of abc">  
+                  <td>{{emp._id}}</td>
+                  <td>{{emp.ClientName}}</td>  
+                  <td>{{emp.ClientEmail}}</td>  
+                  <td>{{emp.ClientSkype}}</td>  
+                  <td class="cell-breakWord">{{emp.ServerDetail}}</td>   
+                  <td>
+                    <button type="button" (click)="Editclient(emp)" class="btn btn-default btn-sm">
+                      <span class="glyphicon glyphicon-pencil"></span> edit 
+                    </button>
+                     <button type="button"  (click)="Deleteclient(emp)" class="btn btn-default btn-sm">
+                      <span class="glyphicon glyphicon-trash"></span> delete 
+                    </button>
+                  
+                  </td>
+               </tr>  
+          </tbody>  
+         </table> 
+        </div> 
+      </div>
+    </div>
+  </body>

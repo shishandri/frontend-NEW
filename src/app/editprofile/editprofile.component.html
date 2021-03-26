@@ -1,0 +1,126 @@
+<!-- <div class="container">
+    <h3>Upload File</h3>
+    <form [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label class="form-label">Address</label>
+        <input type="text" formControlName="address" class="form-control" [ngClass]="{'is-invalid': submitted && f.address.errors }" />
+       
+        </div>
+   
+    <div class="form-group">
+      <label class="form-label">Mobile No.</label>
+      <input type="text" formControlName="mobile" class="form-control" />
+      </div>
+
+  <div class="form-group">
+    <label class="form-label">Alternative No.</label>
+    <input type="text" formControlName="alternativeNo" class="form-control" />
+ 
+    </div>
+
+      <div class="row">
+      
+        <div class="col-sm-6">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" name="uploadedImage"
+              (change)="onFileSelect($event)" #UploadFileInput>
+            <label class="custom-file-label" for="customFile">{{fileInputLabel || 'Choose File'}}</label>
+          </div>
+        </div>
+        <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+        <div class="col-sm-6"> <button class="btn btn-primary" type="submit">Upload</button> </div>
+      </div>
+    </form>
+</div> -->
+
+<!-- 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner"> -->
+                <!-- <div class="side-bar">
+                    <div class="user-info">
+                        <img class="img-profile img-circle img-responsive center-block" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                        <ul class="meta list list-unstyled">
+                            <li class="name">Rebecca Sanders
+                                <label class="label label-info">UX Designer</label>
+                            </li>
+                            <li class="email"><a href="#">Rebecca.S@website.com</a></li>
+                            <li class="activity">Last logged in: Today at 2:18pm</li>
+                        </ul>
+                    </div>
+            		<nav class="side-menu">
+        				<ul class="nav">
+        					<li class="active"><a href="#"><span class="fa fa-user"></span> Profile</a></li>
+        					<li><a href="#"><span class="fa fa-cog"></span> Settings</a></li>
+        					<li><a href="#"><span class="fa fa-credit-card"></span> Billing</a></li>
+        					<li><a href="#"><span class="fa fa-envelope"></span> Messages</a></li>
+        					
+        					<li><a href="user-drive.html"><span class="fa fa-th"></span> Drive</a></li>
+        					<li><a href="#"><span class="fa fa-clock-o"></span> Reminders</a></li>
+        				</ul>
+        			</nav>
+                </div> -->
+                <app-my-nav> 
+                  <body>
+                 <div class="col-md-10"> 
+                  <h1 class="card-title">Profile Details</h1> 
+                  <div class="card"> 
+            
+                    <div class="card-body">
+                      <div class="m-sm-4">
+                    <form class="form-horizontal" [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+                            <h3 class="fieldset-title">Personal Info</h3>
+                            <!-- <div class="form-group avatar"> -->
+                                <!-- <figure class="figure col-md-2 col-sm-3 col-xs-12"> -->
+                                  <img class="img-rounded img-responsive" [src]="imageSrc" *ngIf="imageSrc" style="height: 100px; width:100px">
+                                    <!-- <img class="img-rounded img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""> -->
+                                <!-- </figure> -->
+                                <div class="form-inline">
+                                   <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" name="uploadedImage"
+              (change)="onFileSelect($event)" #UploadFileInput>
+            <label class="custom-file-label" for="customFile">{{fileInputLabel || 'Choose File'}}</label>
+          </div>
+                                    <!-- <input type="file" class="file-uploader pull-left">
+                                    <button type="submit" class="btn btn-sm btn-default-alt pull-left">Update Image</button> -->
+                                </div>
+                            <!-- </div> -->
+                            <div class="form-group">
+                                <!-- <label class="col-md-2 col-sm-3 col-xs-12 control-label">Address</label> -->
+                                <!-- <div class="col-md-10 col-sm-9 col-xs-12"> -->
+                                  <input type="text" formControlName="address" class="form-control form-control-lg"  placeholder="Address" />
+                                    <!-- <input type="text" class="form-control" value="Rebecca"> -->
+                                <!-- </div> -->
+                            </div>
+        
+                            <div class="form-group">
+                                <!-- <label class="col-md-2 col-sm-3 col-xs-12 control-label">Mobile No.</label> -->
+                                <!-- <div class="col-md-10 col-sm-9 col-xs-12"> -->
+                                  <input type="text" formControlName="mobile" class="form-control form-control-lg"  placeholder="Mobile No." />
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-group">
+                                <!-- <label class="col-md-2 col-sm-3 col-xs-12 control-label">Alternative No.</label> -->
+                                <!-- <div class="col-md-10 col-sm-9 col-xs-12"> -->
+                                  <input type="text" formControlName="alternativeNo" class="form-control form-control-lg"  placeholder="Alternative No."/>
+                                <!-- </div> -->
+                            </div>
+                    
+                        
+                        <hr>
+                        <div class="form-group">
+                          <div class="text-center mt-3">
+                            <!-- <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0"> -->
+                                <input class="btn btn-primary" type="submit" value="Update Profile">
+                             </div> 
+                        </div>
+                    </form>
+                  </div>
+                </div> 
+                </div>
+              </div>
+              </body>
+              </app-my-nav> 
+         
