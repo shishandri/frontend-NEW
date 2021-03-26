@@ -5,10 +5,11 @@
 // export const environment = {
 //   production: false
 // };
-export const environment = {
+export const environment = 
+{
   production: false,
- //apiBaseUrl: 'http://162.241.70.148:3000/api'
-   apiBaseUrl: 'http://localhost:3000/api'
+ apiBaseUrl: 'http://162.241.70.148:3000/api'
+ //  apiBaseUrl: 'http://localhost:3000/api'
 
 };
 /*
