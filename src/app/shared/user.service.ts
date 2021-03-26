@@ -54,10 +54,10 @@ export class UserService {
     return this.http.get(environment.apiBaseUrl + '/getprofile');
   }
 
-  forgotPassword(email: string) {
-    debugger;
-    return this.http.post(environment.apiBaseUrl + '/authenticate', { email });
-}
+//   forgotPassword(email: string) {
+//     debugger;
+//     return this.http.post(environment.apiBaseUrl + '/authenticate', { email });
+// }
 
   setToken(token: string) {
     debugger;
