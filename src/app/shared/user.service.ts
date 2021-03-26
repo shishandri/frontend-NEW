@@ -48,7 +48,6 @@ export class UserService {
   }
   
   getUserProfile1() 
-
   {
     debugger;
     return this.http.get(environment.apiBaseUrl + '/getprofile');

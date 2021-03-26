@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
       path: 'signup', component: UserComponent,
@@ -25,6 +26,10 @@ const routes: Routes = [
             path: 'new-password/:token',
             component: NewpasswordComponent,
           },
+          {
+            path: 'dashboard', component: DashboardComponent
+        },
+         
 {
   path: 'request-reset-password',
   component: RequestResetPasswordComponent,

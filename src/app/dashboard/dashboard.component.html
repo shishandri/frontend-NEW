@@ -1,0 +1,212 @@
+<!-- <!-- <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <p>Project Management System</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="userprofile">User Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="clientrecord">Client Details</a>
+          </li>
+        
+            <input type="button" class="Logout" (click)="onLogout()" value="Logout" />   
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <p class="dashboardclass">Welcome To Project Management System</p> -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <div class="navigation">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa fa-home"></i></span>
+          <span class="Title">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa fa-user"></i></span>
+          <span class="Title">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa fa-sign-out"></i></span>
+          <span class="Title">Sign out</span>
+        </a>
+      </li>
+    </ul>
+  </div> -->
+
+
+
+
+ <!-- <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+        <input type="checkbox" id="sidebar-toogle">
+  <div class="sidebar">
+    <div class="sidebar-header">
+    <h3 class="brand">
+        <span class="ti-unlink"></span>
+      <span>Project Management System</span>
+    </h3>
+    <label for="sidebar-toogle" class="ti-menu-alt"></label>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li><a href="/dashboard">
+        <span class="ti-home"></span>
+        <span>Home</span>
+      </a>
+      </li>
+      <li><a href="/userprofile">
+        <span class="ti-user"></span>
+        <span>Profile</span>
+      </a>
+      </li>
+      <li><a href="/clientrecord">
+        <span class="ti-face-smile"></span>
+        <span>Clients</span>
+      </a>
+      </li>
+      <li><a href="/logout">
+        <span class="ti-sign-out-alt"></span>
+        <span>log-out</span>
+      </a></li>
+    </ul>
+  </div>
+  </div>
+  
+  <div class="main-content">
+    <header>
+      <div class="search-wrapper">
+        <span class="ti-search"></span>
+        <input type="search" placeholder="Search">
+      </div>
+    </header> 
+     <main> 
+      <div class="container-fluid p-0">
+     </div>  
+        <h2 class="dash-title">Dashboard</h2> 
+       <div class="dash-cards">
+        <div class="card-single">
+        <div class="card-body mx-auto">
+           <div>
+            <h5>Welcome,{{userDetails.fullName.split(' ')[0]}}</h5>
+          </div> 
+    </div>  
+ </div> 
+     </div>    
+     </main>      
+  </div> 
+     
+     -->
+     <!-- <h1>Angular 11 Install Material Design Example - ItSolutionStuff.Com</h1>
+   
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Name:</mat-label>
+    <input matInput placeholder="Ex. Hardik" value="Hardik">
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Address:</mat-label>
+    <textarea matInput placeholder="Ex. 204, Sarvo, India"></textarea>
+  </mat-form-field>
+  
+  <button mat-raised-button color="primary">Submit!</button>
+</form> -->
+<!-- <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>SimpleCRM</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
+      <a mat-button [routerLink]="'/create-account'"> Create Account </a>
+      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
+      <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
+      <a mat-button [routerLink]="'/activities'"> Activities </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/userprofile'"> Accounts </a>
+      <a mat-list-item [routerLink]="'/create-account'"> Create Account </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Contacts </a>
+      <a mat-list-item [routerLink]="'/create-contact'"> Create Contact </a>
+      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="'dialog'"
+    [mode]="'over'"
+    [opened]="!(isHandset$ | async)">
+  <mat-toolbar>Menu</mat-toolbar>
+  <mat-nav-list>
+    <a mat-list-item href="userprofile">Userprofile</a>
+    <a mat-list-item href="#">Link 2</a>
+    <a mat-list-item href="#">Link 3</a>
+  </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="true">
+        <mat-icon aria-label="Side nav toggle icon" *ngIf="!drawer.opened; else showCross">
+          menu
+        </mat-icon>
+        <ng-template #showCross>
+          <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+        </ng-template>
+      </button>
+      <span>web-doctor</span>
+    </mat-toolbar>
+  
+  <div style="height: 500px">abc</div>
+  <ng-content>
+  </ng-content>
+  
+  </mat-sidenav-content>
+  </mat-sidenav-container> -->
+   <!-- <app-my-nav>  
+      <!-- <router-outlet></router-outlet> -->
+      <!-- </app-my-nav>    -->
+      <app-my-nav> 
+        <body>
+        <div class="col-6">
+          <div class="illustration-text p-3 m-1">
+       <h5 class="illustration-text">Welcome,{{userDetails.fullName.split(' ')[0]}}</h5> 
+       </div>
+     </div>
+     </body>
+     <!-- <router-outlet></router-outlet>  -->
+     </app-my-nav>  
+ 
+   

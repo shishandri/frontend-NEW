@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component'
 import { EditprofileComponent } from './editprofile/editprofile.component'
 import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 export const appRoutes: Routes = [
     
         {
@@ -20,6 +21,9 @@ export const appRoutes: Routes = [
         {
             path: 'login', component: UserComponent,
             children: [{ path: '', component: SignInComponent }]
+        },
+        {
+            path: 'dashboard', component: DashboardComponent
         },
         {
             path: 'userprofile', component: UserProfileComponent,canActivate : [AuthGuard]

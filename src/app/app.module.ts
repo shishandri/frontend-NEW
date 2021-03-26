@@ -35,6 +35,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,7 @@ import { NewpasswordComponent } from './newpassword/newpassword.component';
     EditprofileComponent,
     RequestResetPasswordComponent,
     NewpasswordComponent,
- 
+    DashboardComponent,
    
   ],
   imports: [
