@@ -101,7 +101,7 @@ getprofile()
   
     //   this.url.mobile;
     // this.url.alternativeNo;
-      console.log("hello");
+      // console.log("hello");
     },
    
   );
