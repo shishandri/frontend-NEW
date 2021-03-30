@@ -1,3 +1,5 @@
+
+  
 <app-my-nav>
   <body> 
       <h1>User profile</h1>
@@ -6,10 +8,9 @@
     </div>
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">
+        <div class="card-title">
           <h5 class="mb-0 card-title"></h5>
-    <img class="img-fluid rounded-circle mb-2" src="{{this.urlimg}}" *ngIf="this.urlimg" style="height: 100px; width:100px">
-
+ <img class="img-fluid rounded-circle mb-2" [src]="urlimg" *ngIf="urlimg" style="height: 100px; width:100px"> 
     <span class="filewrap">
       Choose profile picture
       <input type="file" name="uploadedImage" (change)="onFileSelect($event)" #UploadFileInput>
@@ -20,6 +21,7 @@
     <div class="row">
       <div class="col-sm-6">
         <label>Email</label>
+        <br>
         <label>FullName</label>
     </div>
     <div class="col-sm-6">
@@ -67,3 +69,4 @@
   </div>
   </body>
   </app-my-nav>
+

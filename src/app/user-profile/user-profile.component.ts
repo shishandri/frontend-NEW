@@ -11,10 +11,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class UserProfileComponent implements OnInit {
   userDetails:any;
+  abc:any;
   fileUploadForm: any;
   fileInputLabel: any;
   url:any;
-  urlimg:any;
+  urlimg:String='https://i.ibb.co/fDWsn3G/buck.jpg';
   form:any;
   employeeForm: any; 
  
@@ -52,7 +53,7 @@ export class UserProfileComponent implements OnInit {
     
       reader.onload = () => {
    
-        this.urlimg = reader.result as string;
+         this.urlimg = reader.result as string;
      
         this.fileUploadForm.patchValue({
           fileSource: reader.result
@@ -95,7 +96,11 @@ getprofile()
   this.userService.getUserProfile1().subscribe((res:any) => {
       debugger;
       this.url=res['userPro'];
+      
       this.urlimg= this.url.uploadedImage;
+  
+    //   this.url.mobile;
+    // this.url.alternativeNo;
       console.log("hello");
     },
    
