@@ -2,7 +2,7 @@
   <div id="formContent">
   <h2 class="inactive underlineHover">Project Management System</h2> 
 <div>
-   <img src="assets/img/image.png" id="icon" alt="User Icon" /> 
+   <img src="assets/img/logo.png" id="icon" alt="User Icon" /> 
 </div>
 <form #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
   <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email" [pattern]="emailRegex" required
@@ -15,6 +15,7 @@
   <div *ngIf="signInForm.submitted && password.errors?.minlength">
     <label class="validation-message">Minimum 4 characters.</label>
   </div>
+  
   <input type="submit" value="Sign In">
 </form>
 <!-- <div class="form-group col text-right"> -->
