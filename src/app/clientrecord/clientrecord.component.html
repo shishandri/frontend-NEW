@@ -3,18 +3,19 @@
         <div class="container">
           <h1>Client Details</h1>
       </div>
-        
-          
             <div class="card-title">
-              <div class="text-right mt-3">
-              <button type="button" class="btn btn-primary" (click)="AddClient()">Add Client</button> 
-              </div>
+              
               <div class="card-body">
+                <div class="text-right mt-3">
+                  <button type="button" class="btn btn-primary" (click)="AddClient()">Add Client</button>
+                  
+                  </div>
+                  <br>
         <div class="table-responsive">
         <table class="table">
           <thead>  
               <tr>  
-             
+                <th>No.</th>
                 <th>Client Name</th>  
                   <th>Client Email</th>  
                   <th>Client Skype</th>  
@@ -36,7 +37,6 @@
                      <button type="button"  (click)="Deleteclient(emp)" class="btn btn-default btn-sm">
                       <span class="glyphicon glyphicon-trash"></span> delete 
                     </button>
-                  
                   </td>
                </tr>  
           </tbody>  

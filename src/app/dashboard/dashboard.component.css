@@ -32,4 +32,13 @@
 body{
     background-color: #F7F9FE;
  }
-
+ .example-card{
+    top:10%;
+    width:50%;
+    left: 20%;
+    right: 20%;
+    text-align:center;
+    position:fixed;
+    margin:0 auto;
+    display:inline-block;
+}
