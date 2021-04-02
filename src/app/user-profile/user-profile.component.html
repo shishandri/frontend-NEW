@@ -1,12 +1,11 @@
-
+<!-- 
   
 <app-my-nav>
   <body> 
       <h1>User profile</h1>
   <div class="row">
-    <div class="col-sm-1">
-    </div>
-    <div class="col-md-8">
+   
+    <div class="col-md-12">
       <div class="card">
         <div class="card-title">
           <h5 class="mb-0 card-title"></h5>
@@ -15,7 +14,7 @@
       Choose profile picture
       <input type="file" name="uploadedImage" (change)="onFileSelect($event)" #UploadFileInput>
     </span>
-   <!-- <button type="button" (click)=uploadprofile()>Upload Profile Picture</button> -->
+ 
   </div>
   <div class="card-body">
     <div class="row">
@@ -31,55 +30,409 @@
     </div>
      <h1> Add Additional Information</h1>
     <hr size="100"> 
+
+
+
     <form class="form-horizontal" [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
-      
-      <div class="row">
-        <div class="col-sm-4">
-          <label>Address</label>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Personal Email</label>
+    <input type="text" formControlName="PersonalEmail" class="form-control form-control-lg" id="inputEmail4" placeholder="PersonalEmail" />
   </div>
-  <div class=" form-group col-sm-6">
-    <input type="text" formControlName="address" class="form-control form-control-lg" [(ngModel)]="this.add" placeholder="Address" />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputEmail4">current Address</label>
+    <input type="text" formControlName="currentaddress" class="form-control form-control-lg" id="inputEmail4" placeholder="PersonalEmail" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="inputEmail4">Permanent Address</label>
+    <input type="text" formControlName="permanentaddress" class="form-control form-control-lg" id="inputEmail4" placeholder="permanentaddress" />
+  </div>
+      </div>
+     
+      <div class="form-group col-md-8">
+        <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+        <label for="male">Male</label>
+     </div>
+  
+     <div class="form-group col-md-8">
+        <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+        <label for="female">Female</label>
+     </div>
+    
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Personal No.</label>
+    <input type="text" formControlName="personalno" class="form-control form-control-lg" id="inputEmail4" placeholder="personalno" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Alternative No.</label>
+    <input type="text" formControlName="alternativeNo" class="form-control form-control-lg" id="inputEmail4" placeholder="alternativeNo" />
+  </div>
+      </div>
+     
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">User Type</label>
+    <input type="text" formControlName="UserType" class="form-control form-control-lg" id="inputEmail4" placeholder="UserType" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Tl Associated</label>
+    <input type="text" formControlName="Tlassociated" class="form-control form-control-lg" id="inputEmail4" placeholder="Tlassociated" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Nominee Name</label>
+    <input type="text" formControlName="Nominename" class="form-control form-control-lg" id="inputEmail4" placeholder="Nominename" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Nominee Phno.</label>
+    <input type="text" formControlName="NominePhNumber" class="form-control form-control-lg" id="inputEmail4" placeholder="NominePhNumber" />
+  </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Document Upload</label>
+    <input type="text" formControlName="DocumentUpload" class="form-control form-control-lg" id="inputEmail4" placeholder="DocumentUpload" />
+  </div>
+      </div>
+
+
+ <div class="form-row">
+        <div class="form-group">
+          <div class="text-center mt-3">
+          <input class="btn btn-primary" type="submit" value="Update Profile">
+        </div>
+  </div>
+      </div>
+
+  </form>
+
+  </div>
+     </div> 
   </div>
   </div>
-  <div class="row">
+  </body>
+  </app-my-nav> -->
+
+  <!-- <div class="row">
     <div class="col-sm-4">
       <label>Gender</label>
 </div>
 <div class=" form-group col-sm-6">
   <select formControlName="gender" class="form-control" (change)="changeWebsite($event)">
     <!-- <option disabled>Select </option> -->
-    <option>Select</option> 
+    <!-- <option>Select</option> 
     <option *ngFor="let gender of gender">{{gender}}</option>
 </select>
 
 </div>
-</div>
+</div>  -->
+      <!-- <div class="row">
+        <div class="col-sm-4">
+          <label>Current address</label>
+  </div>
+  <div class=" form-group col-sm-6">
+    <input type="text" formControlName="currentaddress" class="form-control form-control-lg"  placeholder="currentaddress" />
+  </div>
+  </div>
   <div class="row">
     <div class="col-sm-4">
-      <label>Mobile No.</label>
-    </div>
-    <div class=" form-group col-sm-6">
-          <input type="text" formControlName="mobile" class="form-control form-control-lg" [(ngModel)]="this.mob" placeholder="Mobile No." />
-    </div>
-  </div>
+      <label>Permanent address</label>
+</div>
+<div class=" form-group col-sm-6">
+<input type="text" formControlName="permanentaddress" class="form-control form-control-lg" placeholder="permanentaddress" />
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <label>Gender</label>
+</div>
+<div class=" form-group col-sm-6">
+<input type="text" formControlName="gender" class="form-control form-control-lg" placeholder="gender" />
+</div>
+</div> 
+<div class="row">
+  <div class="col-sm-4">
+    <label>Personal No.</label>
+</div>
+<div class=" form-group col-sm-6">
+<input type="text" formControlName="personalno" class="form-control form-control-lg" placeholder="personalno" />
+</div>
+</div>
+  
   <div class="row">
     <div class="col-sm-4">
       <label>Alternative No.</label>
     </div>
-    <div class="form-group col-sm-6">
-          <input type="text" formControlName="alternativeNo" class="form-control form-control-lg" [(ngModel)]="this.alternative" placeholder="Alternative No."/>
+    <div class=" form-group col-sm-6">
+          <input type="text" formControlName="alternativeNo" class="form-control form-control-lg"  placeholder="alternativeNo" />
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>User Type</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="UserType" class="form-control form-control-lg"  placeholder="UserType"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Tl associated</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="Tlassociated" class="form-control form-control-lg"  placeholder="Tlassociated"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Nomine name</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="Nominename" class="form-control form-control-lg"  placeholder="Nominename"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Nomine PhNumber</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="NominePhNumber" class="form-control form-control-lg"  placeholder="NominePhNumber"/>
+    </div>
+  </div> -->
+  <!-- <div class="row">
+    <div class="col-sm-4">
+      <label>DocumentUpload</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="DocumentUpload" class="form-control form-control-lg"  placeholder="DocumentUpload"/>
+    </div>
+  </div> -->
+  <!-- <div class="row">
+    <div class="col-sm-4">
+      <label>uploadedImage</label>
+    </div>
+    <div class="form-group col-sm-6">
+          <input type="text" formControlName="uploadedImage" class="form-control form-control-lg"  placeholder="uploadedImage"/>
+    </div>
+  </div> -->
+    <!-- <div class="row">
   <div class="form-group">
   <div class="text-center mt-3">
         <input class="btn btn-primary" type="submit" value="Update Profile">
      </div> 
   </div>
-  </form>
-  </div>
-     </div> 
-  </div>
-  </div>
-  </body>
-  </app-my-nav>
+</div> -->
 
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<app-my-nav>
+
+        <div class="row">
+          <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+            <div class="card card-profile shadow">
+              <div class="row justify-content-center">
+                <div class="col-lg-3 order-lg-2">
+                  <div class="card-profile-image">
+                    <a href="#">
+               <img src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-4.jpg" 
+               class="rounded-circle">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                <div class="d-flex justify-content-between">
+                  <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
+                  <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+                </div>
+              </div>
+              <div class="card-body pt-0 pt-md-4">
+                <div class="row">
+                  <div class="col">
+                    <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                      <div>
+                        <span class="heading">22</span>
+                        <span class="description">Friends</span>
+                      </div>
+                      <div>
+                        <span class="heading">10</span>
+                        <span class="description">Photos</span>
+                      </div>
+                      <div>
+                        <span class="heading">89</span>
+                        <span class="description">Comments</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3>
+                    Jessica Jones<span class="font-weight-light">, 27</span>
+                  </h3>
+                  <div class="h5 font-weight-300">
+                    <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                  </div>
+                  <div class="h5 mt-4">
+                    <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                  </div>
+                  <div>
+                    <i class="ni education_hat mr-2"></i>University of Computer Science
+                  </div>
+                  <hr class="my-4">
+                  <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
+                  <a href="#">Show more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+              <div class="card-header bg-white border-0">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h3 class="mb-0">My account</h3>
+                  </div>
+                  <div class="col-4 text-right">
+                    <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <form class="form-horizontal" [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+                  <h6 class="heading-small text-muted mb-4">User information</h6>
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-username">Personal Email</label>
+                          <input type="email" id="PersonalEmail" formControlName="PersonalEmail" class="form-control form-control-alternative" placeholder="Personal Email">
+                        </div>
+                      </div>
+                    
+                  </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-first-name">Personal No.</label>
+                          <input type="text" id="input-first-name" formControlName="personalno" class="form-control form-control-alternative" placeholder="Personal No.">
+                        </div>
+                      </div>
+                      <div class="col-lg-1">
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-last-name">Alternative No.</label>
+                          <input type="text" id="input-last-name" formControlName="alternativeNo" class="form-control form-control-alternative" placeholder="Alternative No.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                  <!-- Address -->
+                  <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-address">Current Address</label>
+                          <input id="input-address" class="form-control form-control-alternative" formControlName="currentaddress" placeholder="current address"  type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-address">Permanent Address</label>
+                          <input id="input-address" class="form-control form-control-alternative" formControlName="permanentaddress" placeholder="permanent address"  type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <label for="UserType"  class="form-control-label">UserType:</label>
+                        <select formControlName="UserType" class="form-control">
+                            <option disabled>Select Website</option>
+                            <option>Choose Website</option>
+                            <option *ngFor="let web of UserType">{{web}}</option>
+                        </select>
+                    </div>
+            
+                <div class="col-lg-2">
+                  <label  class="form-control-label" for="gender">Gender:</label>
+                  <div>
+                    <input id="male" type="radio" value="male"  name="gender" formControlName="gender" (change)="changeGender($event)">
+                    <label for="male" class="form-control-label">Male</label>
+                  </div>
+                  <div>
+                    <input id="female" type="radio" value="female" name="gender"  formControlName="gender" (change)="changeGender($event)">
+                    <label for="female" class="form-control-label">Female</label>
+                 </div>
+              </div>
+             
+                      
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-last-name">Tl Associated</label>
+                          <input type="text" id="input-last-name" class="form-control form-control-alternative" formControlName="Tlassociated" placeholder="Tl Associated">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-first-name">Nomine Name</label>
+                          <input type="text" id="input-first-name" class="form-control form-control-alternative" formControlName="Nominename" placeholder="Nomine Name">
+                        </div>
+                      </div>
+                      <div class="col-lg-1"></div>
+                      <div class="col-lg-4">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-last-name">Nominee PhNumber</label>
+                          <input type="text" id="input-last-name" class="form-control form-control-alternative" formControlName="NominePhNumber" placeholder="Nominee PhNumber">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <input class="btn btn-primary" type="submit" value="Update Profile">
+                 </div> 
+                  <!-- <hr class="my-4"> -->
+                  <!-- Description -->
+                  <!-- <h6 class="heading-small text-muted mb-4">About me</h6> -->
+                  <!-- <div class="pl-lg-4">
+                    <div class="form-group focused">
+                      <label>About Me</label>
+                      <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                    </div>
+                  </div> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div>
+    </div>
+    <footer class="footer">
+      <div class="row align-items-center justify-content-xl-between">
+        <div class="col-xl-6 m-auto text-center">
+          <div class="copyright">
+            <p>Made with <a href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">Argon Dashboard</a> by Creative Tim</p>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+  <!-- </body> -->
+</app-my-nav>
