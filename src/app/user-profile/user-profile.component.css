@@ -2024,3 +2024,29 @@
   #navbar .navbar {
     margin-bottom: 20px;
   }
+ 
+input[type="file"]{
+    /* width:100%;
+    height:100%; */
+    /* position:absolute; */
+    top:7px;
+    left:0; 
+    opacity:0;
+    cursor:pointer;
+}
+
+
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  font-size:large;
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}

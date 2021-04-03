@@ -10,9 +10,11 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
+ showSucessMessage:any;
   UserType: any = ['Hr','Developer']
   userDetails:any;
+  usrtypchcked:any;
+  gendervalue:any;
   abc:any;
   web:any;
   profilepic:any;
@@ -25,7 +27,18 @@ export class UserProfileComponent implements OnInit {
   urlimg:String='https://i.ibb.co/fDWsn3G/buck.jpg';
   alternative:any;
   employeeForm: any; 
- 
+  genderselect:any;
+  nomph:any;
+  nomname:any;
+  tlass:any;
+  gender:any;
+  alternativeNo:any;
+  personalno:any;
+  currentaddress:any;
+  PersonalEmail:any;
+  permanentaddress:any;
+  genderchecked:any;
+  genderchecked1:any;
   constructor(private userService: UserService,private formBuilder: FormBuilder, private router: Router, private http: HttpClient) { }
  
   ngOnInit() {
@@ -37,12 +50,11 @@ export class UserProfileComponent implements OnInit {
     UserType:[''],
     personalno: [''],
     alternativeNo:[''],
-
     Tlassociated: [''],
     Nominename: [''],
     NominePhNumber: [''],
     // DocumentUpload: [''],
-    // uploadedImage: [''],
+     uploadedImage: [''],
   });
     this.userService.getUserProfile().subscribe(
       (res:any) => {
@@ -57,11 +69,16 @@ export class UserProfileComponent implements OnInit {
    
     this.getprofile();
   }
-  
+
+  changeWebsite(e:any) 
+  {
+    console.log(e.target.value);
+    this.usrtypchcked=e.target.value;
+  }
   changeGender(e:any) {
     debugger;
     console.log(e.target.value);
-    alert('hello');
+    this.genderselect=e.target.value;
   }
   onFileSelect(event:any) {
      debugger;
@@ -90,69 +107,60 @@ export class UserProfileComponent implements OnInit {
   onFormSubmit() {
      debugger;
  
-  // var first_json = this.fileUploadForm.value;
-  // var second_json = this.userDetails;
-  // var jsons = new Array();
-  // jsons.push(first_json);
-  // jsons.push(second_json);
-   
-      
-//  if(this.fileUploadForm.value.uploadedImage=="")
-//  {
-//   this.http
-//   .post<any>('http://localhost:3000/api/updateUserProfilepic',jsons).subscribe(response => {
-//     debugger;
-//     console.log(response);
-//    const urlimg=response['uploadedImage'];
   
-//   });
-// }
-  // else{
   const formData = new FormData();
         formData.append('PersonalEmail', this.fileUploadForm.get('PersonalEmail').value);
         formData.append('currentaddress', this.fileUploadForm.get('currentaddress').value);
         formData.append('permanentaddress', this.fileUploadForm.get('permanentaddress').value);
-        formData.append('gender', this.fileUploadForm.get('websiteList').value);
+        formData.append('gender',this.genderselect);
         formData.append('_id', this.userDetails._id);
         formData.append('personalno', this.fileUploadForm.get('personalno').value);
         formData.append('alternativeNo', this.fileUploadForm.get('alternativeNo').value);
-        formData.append('UserType', this.fileUploadForm.get('UserType').value);
+        formData.append('UserType', this.usrtypchcked);
         formData.append('Tlassociated', this.fileUploadForm.get('Tlassociated').value);
         formData.append('Nominename', this.fileUploadForm.get('Nominename').value);
         formData.append('NominePhNumber', this.fileUploadForm.get('NominePhNumber').value);
-        formData.append('DocumentUpload', this.fileUploadForm.get('DocumentUpload').value);
+        // formData.append('DocumentUpload', this.fileUploadForm.get('DocumentUpload').value);
         formData.append('uploadedImage', this.fileUploadForm.get('uploadedImage').value);
-        formData.append('agentId', '007');
     this.http
     .post<any>('http://localhost:3000/api/updateUserProfile',formData).subscribe(response => {
       debugger;
-     console.log(response);
-     const urlimg=response['uploadedImage'];
+      this.showSucessMessage = true;
+     this.getprofile();
+
     });
-  // }
+
   }
       
          
       
-      // uploadprofile()
-      // {
-      //    debugger;
-        
-      // }
      
     
 getprofile()
 {
   debugger;
   this.userService.getUserProfile1().subscribe((res:any) => {
-      debugger;
+    debugger;
       this.url=res['userPro'];
-    //   this.add= this.url.address;
-    //   this.mob= this.url.mobile;
-    //   this.alternative= this.url.alternativeNo;
-    //   this.urlimg= this.url.uploadedImage;
-    // this.web= this.url.gender;
- 
+      this.urlimg = this.url.uploadedImage;
+      this.nomph = this.url.NominePhNumber;
+      this.nomname = this.url.Nominename; 
+      this.tlass = this.url.Tlassociated;
+      this.abc = this.url.UserType;
+      this.gender = this.url.gender;
+      this.alternativeNo =  this.url.alternativeNo;
+      this.personalno = this.url.personalno;
+      this.currentaddress = this.url.currentaddress;
+      this.permanentaddress = this.url.permanentaddress; 
+      this.PersonalEmail = this.url.PersonalEmail;
+      if(this.gender=='male')
+      {
+        debugger;
+        this.genderchecked=true;
+      }
+      else{
+        this.genderchecked1=true;
+      }
     },
    
   );
