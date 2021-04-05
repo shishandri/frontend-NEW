@@ -12,6 +12,8 @@ import { EditprofileComponent } from './editprofile/editprofile.component'
 import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NewComponentComponent } from './new-component/new-component.component';
+
 export const appRoutes: Routes = [
     
         {
@@ -24,6 +26,9 @@ export const appRoutes: Routes = [
         },
         {
             path: 'dashboard', component: DashboardComponent
+        },
+        {
+            path: 'NewComponentComponent', component: NewComponentComponent
         },
         {
             path: 'userprofile', component: UserProfileComponent,canActivate : [AuthGuard]
@@ -42,8 +47,6 @@ export const appRoutes: Routes = [
          {
     path: 'editprofile', component: EditprofileComponent
        },
-
-        
         {
             path: 'clientrecord', component: ClientrecordComponent
         },

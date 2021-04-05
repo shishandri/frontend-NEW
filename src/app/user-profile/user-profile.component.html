@@ -33,11 +33,8 @@
                         <div class="card-profile-image">
                           <div class="row">
                             <img  class="rounded-circle" [src]="urlimg" *ngIf="urlimg" style="height: 100px; width:100px"> 
-                   
                          <input type="file" name="uploadedImage" (change)="onFileSelect($event)" #UploadFileInput>
-                     
                         </div>
-                    
                         </div>
                       </div>
                     </div>
@@ -95,10 +92,23 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-6">
+                      <div class="col-lg-5">
                         <div class="form-group focused">
                           <label class="form-control-label" for="input-first-name">Nomine Name</label>
                           <input type="text" id="input-first-name" class="form-control form-control-alternative" [(ngModel)]="this.nomname" formControlName="Nominename" placeholder="Nomine Name">
+                        </div>
+                      </div>
+                      <div class="col-lg-1"></div>
+                      <div class="col-lg-6">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="input-first-name">Document Upload</label>
+                          <div class="card-profile-image">
+                            <div class="row">
+                              <img  class="rounded-circle" [src]="urlimg" *ngIf="urlimg" style="height: 100px; width:100px"> 
+                           <input type="file" name="uploadedImage" (change)="onFileSelect($event)" #UploadFileInput>
+                          </div>
+                          </div>
+                           <!-- <input type="text" id="input-first-name" class="form-control form-control-alternative" [(ngModel)]="this.nomname" formControlName="Nominename" placeholder="Nomine Name">  -->
                         </div>
                       </div>
                       <div class="col-lg-6">

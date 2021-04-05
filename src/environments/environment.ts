@@ -8,9 +8,8 @@
 export const environment = 
 {
   production: false,
-//  apiBaseUrl: 'http://162.241.70.148:3000/api'
-   apiBaseUrl: 'http://localhost:3000/api'
-
+ apiBaseUrl: 'http://162.241.70.148:3000/api'
+  // apiBaseUrl: 'http://localhost:3000/api'
 };
 /*
  * For easier debugging in development mode, you can import the following file
